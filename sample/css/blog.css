@@ -1,0 +1,1008 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:opsz@6..12&family=Overpass:wght@300&family=Poppins:ital,wght@0,100;0,800;0,900;1,100&family=Space+Grotesk&family=Young+Serif&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#a{
+  font-size:15px;
+}
+html{
+	/* font-size: 10px; */
+	font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5));
+	background-image: url("https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center no-repeat;
+	background-size: cover;
+	position: relative;
+  overflow: hidden;
+}
+
+.container{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+  font-family: 'Young Serif', serif;
+}
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #eeeeee;
+	font-size: 15px;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.brand{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+  font-family: 'Young Serif', serif;
+}
+
+.brand span{
+	color: crimson;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .3s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: .6s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: .9s;
+}
+nav ul li:nth-child(5){
+	animation-delay: 1.2s;
+}
+nav ul li:nth-child(6){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color:#e7b10a;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 5rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.brand{
+		font-size: 5rem;
+	}
+
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+
+}
+.content1{
+  font-size: 80px;
+  margin-top: 150px;
+  margin-left: 50px;
+font-family: 'Young Serif', serif;
+
+}
+#ski{
+  text-align: left;
+  color: white;
+}
+
+.skill{
+  width:500px;
+
+  color: #fff;
+
+
+}
+
+.bar{
+  background-color: white;
+  display: block;
+  height: 8px;
+
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.22);
+}
+.bar span{
+  height: 20px;
+  float: left;
+  background-color: #E7B10A;
+  /* background: linear-gradient(135deg, rgba(236,0,140,1)0%,rgba(252,103,103,1)100%); */
+}
+.Consulting{
+  width: 90%;
+  animation: Consulting 3s;
+}
+.Financial {
+  width: 80%;
+  animation: Financial  3s;
+}
+.Digital {
+  width: 70%;
+  animation: Digital  3s;
+}
+
+@keyframes Consulting{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%
+  }
+}
+
+@keyframes Financial {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%
+  }
+
+}
+@keyframes Digital{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%
+  }
+}
+/* @keyframes example {
+  0%   {color:white; left:0px; bottom:0px;}
+  25%  {color:white; left:100px; bottom:0px;}
+  50%  {color:white; left:100px; bottom:30px;}
+  75%  {color:black; left:0px; bottom:30px;}
+  100% {color:black; left:0px; bottom:0px;}
+} */
+#first{
+
+  font-size: 80px;
+  font-family: 'Space Grotesk', sans-serif;
+     font-weight: 600;
+}
+#second{
+
+  font-size: 90px;
+  font-family: 'Space Grotesk', sans-serif;
+     font-weight: 600;
+}
+
+#navbaar{
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+.small_card{
+  text-align: center;
+  font-weight:bold;
+}
+.small_card_button{
+  background-color: #E7B10A;
+  width: 100px;
+  height: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+}
+.sub_card_one{
+  height: 50vh;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+.card_one{
+  height:100vh;
+  width:20vw;
+}
+.main_card_two{
+  background-image: url("https://wp.ditsolution.net/itsoft/wp-content/uploads/2020/09/cal-do-action.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height:100vh;
+}
+.main_card_content{
+  color: #ffffff;
+  text-align: center;
+  padding:200px;
+  width: 90vw;
+  margin:auto;
+}
+.bttn{
+  background-color: #E7B10A;
+  color: #ffffff;
+  border-width: 0px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+  height:50px;
+  font-weight: bold;
+}
+.call_video_link a i{
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    background: #ffffff;
+    text-align: center;
+    line-height: 90px;
+    color: #E7B10A;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.clients_card{
+  text-align: center;
+  font-weight:bolder;
+}
+.client_card_button{
+  background-color: #E7B10A;
+  width: 100px;
+  height: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.sub_card_one:hover{
+  background-color: #E7B10A;
+  color:white;
+  transition: 1s;
+}
+.color_one:hover{
+  filter: #E7B10A;
+  -webkit-filter:grayscale(1);
+  transition: 0.3s;
+}
+
+i:hover{
+  color: black;
+}
+
+/* Style the container */
+.container1 {
+    /* display: flex; */
+    /* justify-content: center; */
+
+    height: 100vh;
+    padding-top: 200px;
+    margin-bottom:  250px;
+    margin-left: 5px;
+    /* background-color: #333; */
+}
+
+/* Style the typing text */
+.typing-text {
+    font-size: 84px;
+    color: #fff;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Define the keyframe animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+           /* FOOTER */
+           /* *{
+                   margin: 0;
+                   padding: 0;
+                   font-family: 'Times New Roman', Times, serif;
+                   box-sizing: border-box;
+           } */
+           /* body
+           {
+                   background: white;
+           } */
+
+
+           /* footer */
+/*
+           label{
+  display: inline-block;
+  width: 110px;
+  margin: 0.2cm;
+}
+#align{
+  text-align: center;
+  justify-content: center;
+} */
+
+
+
+            /* BLOG */
+
+	.blog_card{
+  box-shadow: 0px 1px 2px 0px;
+}
+.blog_bg_card1{
+  background-image: url('https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/07/blog1-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:250px;
+}
+.blog_bg_card2{
+  background-image: url('https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/07/blog2-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:250px;
+}
+.blog_bg_card3{
+  background-image: url('https://wp.ditsolution.net/itsoft/wp-content/uploads/2020/09/blog2-1-390x290.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:250px;
+}
+
+.left{
+float: left;
+margin: 10px;
+padding: 5px;
+background-color: #E7B10A;
+color:#ffffff;
+border-width: 0px;
+font-weight: bold;
+}
+.blog_content_card{
+  padding:25px;
+}
+.blog_head_hover:hover{
+  color:#E7B10A;
+}
+
+/* ABOUT BACKGROUND */
+
+/* #CCB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6600, #00a3cc);
+    background-size: 400% 400%;
+    animation: colorChange 10s ease infinite;
+} */
+
+/* Style the text */
+/* h1 {
+    font-size: 36px;
+    color: #fff;
+} */
+
+/* Define the keyframe animation for color change */
+/* @keyframes colorChange {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+
+
+
+
+
+
+
+
+       /* PORTFOLIO */
+
+
+
+			 .e-com {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the image container */
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Create a dark overlay and hide it by default */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Style the caption inside the overlay */
+.caption {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hover effect for the image container */
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.port {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 80vh;
+}
+
+/* Style the image container */
+.ima {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style the image */
+.ima img {
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+    transition: transform 0.3s ease;
+
+}
+
+/* Create a dark overlay and hide it by default */
+.ove {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+		text-align:center;                                      bas kya ok r u there s
+}
+.ove .caption {
+	text-align:left;
+}
+
+/* Style the caption inside the overlay */
+.caption {
+    color: #fff;
+		font-weight: normal;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+		/* margin-left: 180px; */
+}
+.capt{
+	font-size:30px;
+	color:#E7B10A;
+	font-weight: normal;
+
+}
+
+/* Hover effect for the image container */
+.ima:hover img {
+    transform: scale(1.1);
+
+}
+
+.ima:hover .ove {
+    opacity: 1;
+}
+.nav-pills{
+	grid-gap: 1em;
+	margin-left: 400px;
+}
+
+
+
+   /* FOOTER */
+
+	 .btn.btn-link {
+	    display: block;
+	    margin-bottom: 10px;
+	    padding: 0;
+	    text-align: left;
+	    color:#fff;
+	    /* color: var(--light); */
+
+	    font-weight: normal;
+	    transition: .3s;
+	    text-decoration: none;
+	 }
+	 .btn.btn-link::before {
+	    position: relative;
+	    content: "\f105";
+	    font-family: "Font Awesome 5 Free";
+	    font-weight: 900;
+	    margin-right: 10px;
+	 }
+
+	 .btn.btn-link:hover {
+
+	    letter-spacing: 1px;
+	    box-shadow: none;
+	    /* color: var(--secondary); */
+	    color:#E7B10A;
+	 }
+	 #bgcontact{
+		 width: 100%;
+		 height: 100vh;
+		 background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.pexels.com/photos/3228682/pexels-photo-3228682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center no-repeat;
+		 background-size: cover;
+		 position: relative;
+		 overflow: hidden;
+	 }
+
+	 /* #footerbg{
+		 background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://www.lincad.co.uk/wp-content/uploads/2022/08/contact-us-scaled-1.jpg);
+		 background-size: cover;
+		 background-attachment: fixed;
+		 background-position: center;
+	 }
+	  */
+
+
+
+
+
+
+/* PORTFOLIO */
+/* ,:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+} */
+#portfoli-bg{
+	font-family: arial;
+	font-size: 16px;
+	margin:0;
+	/* background: #34aff3; */
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+}
+img{
+	max-width: 100%;
+}
+.ui-card{
+	width: 350px;
+	position: relative;
+	overflow: hidden;
+
+	transition: all 0.3s ease-out;
+	background:radial-gradient(#111 50%, #000 100%);
+}
+
+.ui-card img{
+	transform: scale(1.3);
+	transition: all 0.3s ease-out;
+}
+.ui-card:hover img{
+	transform: scale(1.1) translateY(-20px);
+	opacity: 0.3
+}
+.ui-card .description{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+.ui-card .description h3{
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
+}
+.ui-card .description p{
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+.ui-card .description a{
+	color: #fff;
+	background:#34aff3;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.4s;
+}
+.ui-card .description a:hover{
+	background:#0a83c5;
+}
+.ui-card:hover .description h3{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description a{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.bgp{
+	background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url(https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+/* #detail-1{
+	font-family: none;
+} */
+
+
+/* ############################################## CONTACT BG */
+.bgc{
+	background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url(https://images.pexels.com/photos/3184285/pexels-photo-3184285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+	background-size: cover;
+}
+
+/* Style the container */
+.container1 {
+    /* display: flex; */
+    /* justify-content: center; */
+
+    height: 100vh;
+    padding-top: 200px;
+    margin-bottom:  250px;
+    margin-left: 5px;
+    /* background-color: #333; */
+}
+
+/* Style the typing text */
+.typing-text {
+    color: #fff;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Define the keyframe animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+
+
+
+/* #################### BLOG ##################### */
+#bgblog1{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://images.pexels.com/photos/7869102/pexels-photo-7869102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+#bgblog2{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://media.designrush.com/articles/76477/conversions/how-to-choose-a-digital-marketing-agency-details.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#bgblog3{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://media.istockphoto.com/id/1026985414/photo/lookinhg-at-documents.jpg?s=612x612&w=0&k=20&c=vr80C_DKNv_C8GC789djHORNErPnifnIUOKwkDHdRWM=');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#bgblog4{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://auburn.edu/outreach/opce/digitalmarketing/images/DMI_WebBanner.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#bgblog5{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://www.simplilearn.com/ice9/free_resources_article_thumb/5-Best-Digital-Marketing-Practices-for-2018_Banner.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#bgblog6{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://plus.unsplash.com/premium_photo-1661414415246-3e502e2fb241?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFya2V0aW5nfGVufDB8fDB8fHww');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#bgblog7{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url('https://img.freepik.com/free-photo/young-employees-sitting-office-table-using-laptop-team-work-brainstorming-meeting-concept_146671-15635.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.card{
+  border:none;
+}
+.left{
+float: left;
+margin: 10px;
+padding: 5px;
+background-color: #E7B10A;
+color:#ffffff;
+border-width: 0px;
+font-weight: bold;
+}
+
+.s_blog_head_hover:hover{
+  color:#E7B10A;
+}
+
+
+.s_blog_card{
+	padding:10px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+}
+.s_blog_bg1{
+	background-image: url('https://img.freepik.com/premium-photo/seo-search-engine-optimization-concept-diagram-with-icon_512283-544.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:500px;
+	width:100%;
+}
+.s_blog_bg2{
+	background-image: url('https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/content-marketing-meeting-t.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:500px;
+	width:100%;
+}
+.s_blog_bg3{
+	background-image: url('https://cdn2.hubspot.net/hubfs/242200/Everything%20Manufacturers%20Need%20to%20Know%20About%20Paid%20Marketing.png');
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:500px;
+	width:100%;
+}
+.s_blog_bg4{
+	background-image: url('https://img.freepik.com/premium-photo/social-media-icons-logos-with-3d-megaphone-digital-social-media-marketing-background_125322-1167.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:500px;
+	width:100%;
+}
+.s_blog_bg5{
+	background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20180726155253-GettyImages-860221048.jpeg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:500px;
+	width:100%;
+}
+.s_blog_bg6{
+	background-image: url('https://www.webindiamaster.com/assests/images/web-development-company-1-2022.jpg?tr=w-425');
+	background-size:cover;
+	background-repeat: no-repeat;
+	height:500px;
+	width:100%;
+}
+.s_blog_content{
+	padding:25px;
+}
+.s_card{
+	padding:45px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+.s2_card{
+	padding:25px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+
+}
+.s3_card{
+	padding:25px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+
+}
+form {
+  background-color: #ffffff;
+  width: 320px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+	border:1px solid grey;
+
+}
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: grey;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+::placeholder {
+  color: grey;
+  opacity: 0.7;
+}
+
+
+svg {
+  color: grey;
+  fill: currentColor;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+#seo_blog{
+	font-family:'Roboto';
+}

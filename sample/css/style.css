@@ -1,0 +1,1313 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Nunito+Sans:opsz@6..12&family=Overpass:wght@300&family=Poppins:ital,wght@0,100;0,800;0,900;1,100&family=Space+Grotesk&family=Young+Serif&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+#a{
+  font-size:15px;
+}
+html{
+
+	font-family: "Roboto Cn", sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #eee;
+}
+
+header{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center no-repeat;
+	background-size: cover;
+	position: relative;
+  overflow: hidden;
+}
+
+#fontstyle{
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+  font-family: 'Young Serif', serif;
+}
+
+.menu-toggle{
+	position: fixed;
+	top: 2.5rem;
+	right: 2.5rem;
+	color: #eeeeee;
+	font-size: 15px;
+	cursor: pointer;
+	z-index: 1000;
+	display: none;
+}
+
+nav{
+	padding-top: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+}
+
+.brand{
+	/* width: 90%; */
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+  font-family: 'Young Serif', serif;
+}
+
+.brand span{
+	color: crimson;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .3s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: .6s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: .9s;
+}
+nav ul li:nth-child(5){
+	animation-delay: 1.2s;
+}
+nav ul li:nth-child(6){
+	animation-delay: 1.5s;
+}
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color:#e7b10a;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+}
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+  display: none;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.menu-toggle{
+		display: block;
+	}
+
+	nav{
+		padding-top: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		height: 100vh;
+		text-align: center;
+	}
+
+	nav ul{
+		flex-direction: column;
+	}
+
+	nav ul li{
+		margin-top: 5rem;
+	}
+
+	nav ul li a{
+		margin: 0;
+		font-size: 2.5rem;
+	}
+
+	.brand{
+		font-size: 5rem;
+	}
+
+  .overlay.menu-open,
+  nav.menu-open{
+	  display: flex;
+	  transform: scale(1);
+	  opacity: 1;
+  }
+
+}
+.content1{
+  font-size: 80px;
+  margin-top: 150px;
+  margin-left: 50px;
+font-family: 'Young Serif', serif;
+
+}
+#ski{
+  text-align: left;
+  color: white;
+}
+
+.skill{
+  width:500px;
+
+  color: #fff;
+
+
+}
+
+.bar{
+  background-color: white;
+  display: block;
+  height: 8px;
+
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.22);
+}
+.bar span{
+  height: 20px;
+  float: left;
+  background-color: #E7B10A;
+  /* background: linear-gradient(135deg, rgba(236,0,140,1)0%,rgba(252,103,103,1)100%); */
+}
+.Consulting{
+  width: 90%;
+  animation: Consulting 3s;
+}
+.Financial {
+  width: 80%;
+  animation: Financial  3s;
+}
+.Digital {
+  width: 70%;
+  animation: Digital  3s;
+}
+
+@keyframes Consulting{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%
+  }
+}
+
+@keyframes Financial {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%
+  }
+
+}
+@keyframes Digital{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%
+  }
+}
+/* @keyframes example {
+  0%   {color:white; left:0px; bottom:0px;}
+  25%  {color:white; left:100px; bottom:0px;}
+  50%  {color:white; left:100px; bottom:30px;}
+  75%  {color:black; left:0px; bottom:30px;}
+  100% {color:black; left:0px; bottom:0px;}
+} */
+#first{
+
+  font-size: 80px;
+  font-family: 'Space Grotesk', sans-serif;
+     font-weight: 600;
+}
+#second{
+
+  font-size: 90px;
+  font-family: 'Space Grotesk', sans-serif;
+     font-weight: 600;
+}
+
+#navbaar{
+  font-family: 'Space Grotesk', sans-serif;
+
+}
+.small_card{
+  text-align: center;
+  font-weight:bold;
+}
+.small_card_button{
+  background-color: #E7B10A;
+  width: 100px;
+  height: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+}
+.sub_card_one{
+  height: 50vh;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+.card_one{
+  height:100vh;
+  width:20vw;
+}
+.main_card_two{
+  background-image: url("https://wp.ditsolution.net/itsoft/wp-content/uploads/2020/09/cal-do-action.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height:100vh;
+}
+.main_card_content{
+  color: #ffffff;
+  text-align: center;
+  padding:200px;
+  width: 90vw;
+  margin:auto;
+}
+.bttn{
+  background-color: #E7B10A;
+  color: #ffffff;
+  border-width: 0px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+  height:50px;
+  font-weight: bold;
+}
+.call_video_link a i{
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    background: #ffffff;
+    text-align: center;
+    line-height: 90px;
+    color: #E7B10A;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.clients_card{
+  text-align: center;
+  font-weight:bolder;
+}
+.client_card_button{
+  background-color: #E7B10A;
+  width: 100px;
+  height: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.sub_card_one:hover{
+  background-color: #E7B10A;
+  color:white;
+  transition: 1s;
+}
+.color_one:hover{
+  filter: #E7B10A;
+  -webkit-filter:grayscale(1);
+  transition: 0.3s;
+}
+
+i:hover{
+  color: black;
+}
+
+/* Style the container */
+.container1 {
+    /* display: flex; */
+    /* justify-content: center; */
+
+    height: 100vh;
+    padding-top: 200px;
+    margin-bottom:  250px;
+    margin-left: 5px;
+    /* background-color: #333; */
+}
+
+/* Style the typing text */
+.typing-text {
+    font-size: 84px;
+    color: #fff;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Define the keyframe animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+           /* FOOTER */
+           /* *{
+                   margin: 0;
+                   padding: 0;
+                   font-family: 'Times New Roman', Times, serif;
+                   box-sizing: border-box;
+           } */
+           /* body
+           {
+                   background: white;
+           } */
+
+
+           /* footer */
+/*
+           label{
+  display: inline-block;
+  width: 110px;
+  margin: 0.2cm;
+}
+#align{
+  text-align: center;
+  justify-content: center;
+} */
+
+
+
+            /* BLOG */
+
+
+
+       /* PORTFOLIO */
+
+
+
+			 .e-com {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style the image container */
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Create a dark overlay and hide it by default */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Style the caption inside the overlay */
+.caption {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Hover effect for the image container */
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.port {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 80vh;
+}
+
+/* Style the image container */
+.ima {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style the image */
+.ima img {
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+    transition: transform 0.3s ease;
+
+}
+
+/* Create a dark overlay and hide it by default */
+.ove {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.6);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+		text-align:center;                                      bas kya ok r u there s
+}
+.ove .caption {
+	text-align:left;
+}
+
+/* Style the caption inside the overlay */
+.caption {
+    color: #fff;
+		font-weight: normal;
+    /* font-size: 15px; */
+    /* font-weight: bold; */
+		/* margin-left: 180px; */
+}
+.capt{
+	font-size:30px;
+	color:#E7B10A;
+	font-weight: normal;
+
+}
+
+/* Hover effect for the image container */
+.ima:hover img {
+    transform: scale(1.1);
+
+}
+
+.ima:hover .ove {
+    opacity: 1;
+}
+.nav-pills{
+	grid-gap: 1em;
+	margin-left: 400px;
+}
+
+
+
+   /* FOOTER */
+
+	 .footer {
+	     /* margin-top: 6rem; */
+	     margin-bottom: 0;
+	     padding-top: 4rem;
+	     background:
+	         url(../img/bg-top.png),
+	         url(../img/map.png);
+	     background-position:
+	         center top,
+	         center center;
+	     background-repeat: no-repeat;
+	 }
+
+	 .footer .btn.btn-social {
+	     margin-right: 5px;
+	     width: 40px;
+	     height: 40px;
+	     display: flex;
+	     align-items: center;
+	     justify-content: center;
+	     color: var(--light);
+	     border: 1px solid rgba(256, 256, 256, .1);
+	     border-radius: 40px;
+	     transition: .3s;
+	 }
+
+	 .footer .btn.btn-social:hover {
+	     color: var(--primary);
+	 }
+
+	 .footer .btn.btn-link {
+	     display: block;
+	     margin-bottom: 10px;
+	     padding: 0;
+	     text-align: left;
+	     color: var(--light);
+	     font-weight: normal;
+	     transition: .3s;
+	 }
+
+	 .footer .btn.btn-link::before {
+	     position: relative;
+	     content: "\f105";
+	     font-family: "Font Awesome 5 Free";
+	     font-weight: 900;
+	     margin-right: 10px;
+	 }
+
+	 .footer .btn.btn-link:hover {
+	     letter-spacing: 1px;
+	     box-shadow: none;
+	     color: var(--secondary);
+	 }
+
+	 .footer .copyright {
+	     padding: 25px 0;
+	     font-size: 14px;
+	     border-top: 1px solid rgba(256, 256, 256, .1);
+	 }
+
+	 .footer .copyright a {
+	     color: var(--light);
+	 }
+
+	 .footer .footer-menu a {
+	     margin-right: 15px;
+	     padding-right: 15px;
+	     border-right: 1px solid rgba(255, 255, 255, .1);
+	 }
+
+	 .footer .footer-menu a:last-child {
+	     margin-right: 0;
+	     padding-right: 0;
+	     border-right: none;
+	 }
+
+	 .footer .copyright a:hover,
+	 .footer .footer-menu a:hover {
+	     color: var(--secondary);
+	 }
+
+
+
+
+
+
+
+/* PORTFOLIO */
+/* *,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+} */
+#portfoli-bg{
+	font-family: arial;
+	font-size: 16px;
+	margin:0;
+	/* background: #34aff3; */
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 100vh;
+}
+img{
+	max-width: 100%;
+}
+.ui-card{
+	width: 350px;
+	position: relative;
+	overflow: hidden;
+
+	transition: all 0.3s ease-out;
+	background:radial-gradient(#111 50%, #000 100%);
+}
+
+.ui-card img{
+	transform: scale(1.3);
+	transition: all 0.3s ease-out;
+}
+.ui-card:hover img{
+	transform: scale(1.1) translateY(-20px);
+	opacity: 0.3
+}
+.ui-card .description{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 15px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+}
+.ui-card .description h3{
+	font-weight: 700;
+	font-size: 32px;
+	margin: 0 0 20px;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out;
+
+}
+.ui-card .description p{
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.2s;
+}
+.ui-card .description a{
+	color: #fff;
+	background:#34aff3;
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	transform: translateY(30px);
+	opacity: 0;
+	transition: all 0.3s ease-out 0.4s;
+}
+.ui-card .description a:hover{
+	background:#0a83c5;
+}
+.ui-card:hover .description h3{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description p{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.ui-card:hover .description a{
+	opacity: 1;
+	transform: translateY(0px);
+}
+.bgp{
+	background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url(https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+/* #detail-1{
+	font-family: none;
+} */
+
+
+/* ############################################## CONTACT BG */
+.bgc{
+	background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url(https://images.pexels.com/photos/3184285/pexels-photo-3184285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat;
+	background-size: cover;
+}
+
+/* #### About = Header = Bg #### */
+.bga{
+	background:linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url('https://kevsbest.com/wp-content/uploads/2019/07/Best-Digital-Marketing-Agencies-in-St-Louis.jpg') no-repeat;
+	background-size: cover;
+}
+
+
+
+
+/* ################################## SERVICES#################3 */
+
+
+
+
+.small_card{
+  text-align: center;
+  font-weight:bold;
+}
+.small_card_button{
+  background-color: #E7B10A;
+  width: 100px;
+  height: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+	/* margin-left: 50px; */
+}
+.sub_card_one{
+  height: 50vh;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+
+
+}
+.card_one{
+  height:100vh;
+  width:20vw;
+}
+.main_card_two{
+  background-image: url("https://wp.ditsolution.net/itsoft/wp-content/uploads/2020/09/cal-do-action.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height:100vh;
+}
+.main_card_content{
+  color: #ffffff;
+  text-align: center;
+  padding:200px;
+  width: 90vw;
+  margin:auto;
+}
+.bttn{
+  background-color: #E7B10A;
+  color: #ffffff;
+  border-width: 0px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 200px;
+  height:50px;
+  font-weight: bold;
+}
+.call_video_link a i{
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    background: #ffffff;
+    text-align: center;
+    line-height: 90px;
+    color: #E7B10A;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.clients_card{
+  text-align: center;
+  font-weight:bolder;
+}
+.client_card_button{
+  background-color: #E7B10A;
+  width: 100px;
+  height: 7px;
+  border-width: 0px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.sub_card_one{
+  background-color: #E7B10A;
+  color:white;
+  transition: 1s;
+}
+.color_one:hover{
+  filter: #E7B10A;
+  -webkit-filter:grayscale(1);
+  transition: 0.3s;
+}
+
+i:hover{
+  color: white;
+}
+
+/* Style the container */
+.container1 {
+    /* display: flex; */
+    /* justify-content: center; */
+
+    height: 100vh;
+    padding-top: 200px;
+    margin-bottom:  250px;
+    margin-left: 5px;
+    /* background-color: #333; */
+}
+
+/* Style the typing text */
+.typing-text {
+    color: #fff;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Define the keyframe animations */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+
+
+
+/* #################### BLOG ##################### */
+#bgblog{
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)),url(https://images.pexels.com/photos/7869102/pexels-photo-7869102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+.card{
+  border:none;
+}
+.left{
+float: left;
+margin: 10px;
+padding: 5px;
+background-color: #E7B10A;
+color:#ffffff;
+border-width: 0px;
+font-weight: bold;
+}
+
+.blog_head_hover:hover{
+  color:#E7B10A;
+}
+
+
+
+
+/* https://wp.ditsolution.net/itsoft/wp-content/uploads/2020/09/blog1.jpg */
+
+
+
+.blog-container{
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+
+}
+
+.blog-container .card{
+  position: relative;
+}
+
+.blog-container .card .face{
+  width:300px;
+  height: 200px;
+  transition:.4s;
+
+}
+
+.blog-container .card .face.face1{
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  /* align-content:center; */
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.blog-container .card:hover .face.face1{
+  transform: translateY(0);
+  /* box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff; */
+
+}
+
+
+.blog-container .card .face.face1 .content{
+  opacity: .2;
+  transition:  0.5s;
+  text-align: center;
+
+
+
+
+
+
+}
+
+.blog-container .card:hover .face.face1 .content{
+  opacity: 1;
+
+}
+
+.container .card .face.face1 .content i{
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+
+}
+
+.blog-container .card .face.face1 .content h3{
+  font-size: 1em;
+  color: white;
+  text-align: center;
+
+
+}
+
+.blog-container .card .face.face1 .content a{
+   transition: .5s;
+}
+
+.blog-container .card .face.face2{
+   position: relative;
+   background: whitesmoke;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  transform: translateY(-100px);
+}
+
+.blog-container .card:hover .face.face2{
+    transform: translateY(0);
+
+
+}
+
+
+
+
+
+
+
+.blog_bg_pic1 {
+  background-image: url('https://media.istockphoto.com/id/1337612033/photo/seo-search-engine-optimization-concept-for-promoting-ranking-traffic-on-website-optimizing.jpg?s=612x612&w=0&k=20&c=eClJcifBCwOGQBSB0EG5TNKSEdWE0SnuUvQtU4AkteQ=');
+  height:100px;
+  background-size: cover;
+}
+.blog_bg_pic2 {
+  background-image: url('https://www.tutorialspoint.com/digital_marketing/images/target_markets.jpg');
+  height:100px;
+  background-size: cover;
+}
+.blog_bg_pic3 {
+  background-image: url('https://www.strivemindz.com/images/offerings/mobile/web-development.jpg');
+  height:100px;
+  background-size: cover;
+}
+.blog_bg_pic4 {
+  background-image: url( https://seegerconsultinginc.com/wp-content/uploads/2018/01/Image_1-1-1024x624.jpeg);
+  height:100px;
+  background-size: cover;
+}
+.blog_bg_pic5 {
+  background-image: url('https://oviondwebsite.s3.amazonaws.com/online_marketing_commercial_connection_technology_140040630e.jpg');
+  height:100px;
+  background-size: cover;
+}
+.blog_bg_pic6 {
+  background: url('https://www.specbee.com/sites/default/files/2022-11/social-media-teaser.jpg');
+  height:100px;
+  /* background-size: cover; */
+}
+
+
+
+/* ########################################## FOOTER ##############3333333333333333 */
+.footer {
+    /* margin-top: 6rem; */
+    margin-bottom: 0;
+    padding-top: 4rem;
+    background:
+        url(../img/bg-top.png),
+        url(../img/map.png);
+    background-position:
+        center top,
+        center center;
+    background-repeat: no-repeat;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid rgba(256, 256, 256, .1);
+    border-radius: 40px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    color: var(--light);
+    font-weight: normal;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+    color: var(--secondary);
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 14px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+.footer .copyright a:hover,
+.footer .footer-menu a:hover {
+    color: var(--secondary);
+}
+
+
+
+
+
+
+/* ###################################### SERVICES */
+
+.bgs{
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,.5)), url("https://www.oliveandcompany.com/wp-content/uploads/digital-marketing-program.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+  overflow: hidden;
+}
+
+
+.service-item {
+    position: relative;
+    padding: 45px 30px;
+    background: var(--light);
+    overflow: hidden;
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -15px;
+    padding-bottom: 60px;
+    background: #e7b10a;
+}
+
+.service-item .service-icon {
+    margin: 0 auto 20px auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzP2YPGQo68QBmyTpK2saVwmRUYDTK8XuOrw&usqp=CAU) center center no-repeat;
+    background-size: contain;
+    transition: .5s;
+}
+
+.service-item:hover .service-icon {
+    color: white;
+    background: url(../img/blob-secondary.png) center center no-repeat;
+    background-size: contain;
+}
+
+.service-item h5,
+.service-item p {
+    transition: .5s;
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+    color: #ffffff;
+}
+
+.service-item a.btn {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary);
+    background: #FFFFFF;
+    border-radius: 40px 40px 0 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item a.btn:hover {
+    color: var(--dark);
+    background: var(--secondary);
+}
+
+.service-item:hover a.btn {
+    bottom: 0;
+}
+
+
+
+
+
+
+
+/* ############################# ABOUT TEAM############################### */
+.team-item .btn {
+    color: var(--primary);
+    background: #e7b10a;
+}
+
+.team-item .btn:hover {
+    color: #ffffff;
+    background:#black;
+}
+
+
+
+
+
+/* ######################################## BLOG ######################## */
+.blog-card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Base styles for each card */
+        .blog-image-card{
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background image */
+        .blog-image-card {
+            /* background-image: url('https://wp.ditsolution.net/itsoft/wp-content/uploads/2023/07/blog1-1.jpg'); */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height:50vh;
+        }
+
+        /* Hover effect for image */
+        .blog-image-card:hover {
+            background-size: 100%; /* Increase the size slightly on hover */
+        }
+
+        /* Text styles */
+        .blog-text {
+            background: #E7B10A;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position:absolute;
+            bottom: 0;
+            width: 100%;
+            transform: translateY(100%);
+            transition: 0.5s;
+
+        }
+
+        /* Hover effect for text */
+        .blog-image-card:hover .blog-text {
+            transform: translateY(0);
+        }
